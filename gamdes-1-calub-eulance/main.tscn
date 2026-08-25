@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://ccaf6gk08qoda"]
 
-[ext_resource type="Texture2D" uid="uid://b1tfrg3oj64tu" path="res://Cinq_Assoc._East_Section_3_Don_Quixote_Evade_Sprite.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://b1tfrg3oj64tu" path="res://Cinq_Assoc._East_Section_3_Don_Quixote_Evade_Sprite.png" id="1_glv2v"]
 
 [node name="Main" type="Node2D" unique_id=1617953128]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2091867714]
+[node name="Player" type="Sprite2D" parent="." unique_id=2091867714]
 position = Vector2(-4.500004, -21.50883)
 scale = Vector2(0.23591551, 0.2359155)
-texture = ExtResource("1_ig7tw")
+texture = ExtResource("1_glv2v")
 
-[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1024287125]
+[node name="Camera" type="Camera2D" parent="Player" unique_id=1024287125]
 position = Vector2(19.074642, 116.60458)
 scale = Vector2(4.238806, 4.238806)
 
-[node name="Label" type="Label" parent="." unique_id=236058688]
+[node name="ScoreLabel" type="Label" parent="." unique_id=236058688]
 offset_left = 7.0
 offset_top = -56.0
 offset_right = 47.0
