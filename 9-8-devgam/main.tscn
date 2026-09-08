@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://by5txsclwfji6"]
+
+[ext_resource type="Texture2D" uid="uid://d4iftsevdrj24" path="res://Cinq_Assoc._East_Section_3_Don_Quixote_Evade_Sprite.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cnllicc0f7l4v" path="res://character_body_2d.gd" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://bxe6vgxfdks4f" path="res://label.gd" id="3_h2yge"]
+
+[sub_resource type="GDScript" id="GDScript_0xm2m"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+func move(user_input):
+	
+	pass
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nvi8x"]
+radius = 31.0
+height = 204.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_nvi8x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvi8x"]
+size = Vector2(1161, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(306.75, 44)
+
+[node name="Main" type="Node2D" unique_id=555760069]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1921121148]
+position = Vector2(335, 85)
+disable_mode = 2
+script = ExtResource("1_h2yge")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=1639001964]
+position = Vector2(45.25001, 71.22096)
+scale = Vector2(0.46302828, 0.4630282)
+texture = ExtResource("1_0xm2m")
+script = SubResource("GDScript_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=620393544]
+position = Vector2(43, 68)
+shape = SubResource("CapsuleShape2D_nvi8x")
+
+[node name="Label" type="Label" parent="CharacterBody2D" unique_id=1632301537]
+offset_left = -7.0
+offset_top = -59.0
+offset_right = 93.0
+offset_bottom = -36.0
+text = "player_name"
+label_settings = SubResource("LabelSettings_nvi8x")
+script = ExtResource("3_h2yge")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=471425034]
+position = Vector2(42, 65)
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1057792620]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=21969557]
+position = Vector2(581.5, 610)
+shape = SubResource("RectangleShape2D_nvi8x")
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=187696742]
+offset_left = 1.0
+offset_top = 603.0
+offset_right = 1162.0
+offset_bottom = 651.0
+
+[node name="Floor2" type="StaticBody2D" parent="." unique_id=1724341272]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2" unique_id=887279297]
+position = Vector2(771.00006, 550)
+rotation = -0.3689345
+shape = SubResource("RectangleShape2D_nvi8x")
+
+[node name="ColorRect" type="ColorRect" parent="Floor2" unique_id=292659258]
+offset_left = 300.0
+offset_top = 722.00006
+offset_right = 1461.0
+offset_bottom = 770.00006
+rotation = -0.3652508
+
+[node name="Floor3" type="StaticBody2D" parent="." unique_id=1759807143]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3" unique_id=1874990759]
+position = Vector2(1621, 227)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="Floor3" unique_id=545073708]
+offset_left = 1470.0
+offset_top = 204.0
+offset_right = 1781.0
+offset_bottom = 250.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor4" type="StaticBody2D" parent="." unique_id=1327440539]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor4" unique_id=276288304]
+position = Vector2(2082, 423)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="Floor4" unique_id=240439289]
+offset_left = 1926.0
+offset_top = 402.0
+offset_right = 2237.0
+offset_bottom = 448.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor5" type="StaticBody2D" parent="." unique_id=1572982256]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor5" unique_id=1398779981]
+position = Vector2(2524, 638)
+rotation = 0.55510044
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="Floor5" unique_id=1210502462]
+offset_left = 2403.0
+offset_top = 537.0
+offset_right = 2714.0
+offset_bottom = 583.0
+rotation = 0.5573227
+metadata/_edit_use_anchors_ = true
+
+[node name="Floor6" type="StaticBody2D" parent="." unique_id=1752913639]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor6" unique_id=315721439]
+position = Vector2(2996, 572)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="ColorRect" type="ColorRect" parent="Floor6" unique_id=1233778049]
+offset_left = 2846.0
+offset_top = 550.0
+offset_right = 3157.0
+offset_bottom = 596.0
+metadata/_edit_use_anchors_ = true
