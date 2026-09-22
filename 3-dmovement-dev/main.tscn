@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ce0ivf8ivxoyu"]
+
+[ext_resource type="PackedScene" uid="uid://ckgged6onesgo" path="res://floor.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ckkkpo3edta3f" path="res://player.tscn" id="2_h2yge"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_afle1"]
+
+[sub_resource type="Sky" id="Sky_ps246"]
+sky_material = SubResource("ProceduralSkyMaterial_afle1")
+
+[sub_resource type="Environment" id="Environment_ps246"]
+background_mode = 2
+sky = SubResource("Sky_ps246")
+
+[node name="Main" type="Node3D" unique_id=211798418]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=777623021]
+environment = SubResource("Environment_ps246")
+
+[node name="floor" parent="." unique_id=613403339 instance=ExtResource("1_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12075281, 0, 0.52729106)
+
+[node name="player" parent="." unique_id=2085445518 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08639073, 2.5939548, 0.007153988)

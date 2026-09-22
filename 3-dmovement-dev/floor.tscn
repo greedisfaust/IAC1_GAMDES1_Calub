@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ckgged6onesgo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ps246"]
+size = Vector3(32.97452, 0.05908203, 40.613754)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ps246"]
+size = Vector3(4.928253, 0.029296875, 26.487259)
+
+[node name="floor" type="Node3D" unique_id=613403339]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=189540395]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1033730105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.743248, 0.047647268, 2.6207924)
+shape = SubResource("BoxShape3D_ps246")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=657362847]
+transform = Transform3D(5.7378297, 0, 0, 0, 1, 0, 0, 0, 1, -0.391868, -0.00038731098, 0.6753707)
+mesh = SubResource("BoxMesh_ps246")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="StaticBody3D" unique_id=2132424629]
+transform = Transform3D(1, 0, 0, 0, 0.8982757, 0.4394324, 0, -0.4394324, 0.8982757, 0, 8.360853, 13.419102)
+light_color = Color(0.810661, 0.80734473, 0.8159397, 1)

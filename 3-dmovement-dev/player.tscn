@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ckkkpo3edta3f"]
+
+[ext_resource type="Script" uid="uid://njd0e2t05y6b" path="res://character_body_3d.gd" id="1_4flbx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ps246"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ps246"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_onrkg"]
+font_size = 40
+
+[node name="player" type="Node3D" unique_id=2085445518]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=192901728]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=419637480]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_ps246")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1428868437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+current = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1087666001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0796341, -0.0080346465)
+mesh = SubResource("CapsuleMesh_ps246")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1107460515]
+
+[node name="movementLabel" type="Label" parent="CanvasLayer" unique_id=900120387]
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 387.0
+offset_bottom = 179.0
+label_settings = SubResource("LabelSettings_onrkg")
